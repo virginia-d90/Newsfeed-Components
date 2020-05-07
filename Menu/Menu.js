@@ -33,7 +33,7 @@ let menuItems = [
   Step 6: add the menu component to the DOM.
   
 */
-
+const mountButton = document.querySelector('.header')
 
 function makeMenu(itemArray){
   
@@ -48,10 +48,7 @@ function makeMenu(itemArray){
   //assign class names
   mainDiv.classList.add('menu')
 
-  //give text content
-  // mainDiv.textContent = 'open'
-  // list.textContent = 'ta da'
-
+  //step 2
   itemArray.forEach(item => {
     let newListItem = document.createElement('li')
     newListItem.textContent = item
@@ -66,11 +63,15 @@ function makeMenu(itemArray){
 
 return mainDiv
 }
-// console.log(makeMenu(menuItems))
-// menuItems.forEach(item => {
-//   const menu = makeMenu(item)
-//   menuButton.appendChild(menu)
-// })
-const menuButton = document.querySelector('.menu-button')
+
+
+// let menu = makeMenu(menuItems.forEach(item => {
+//   let newListItem = document.createElement('li')
+//   newListItem.textContent = item
+//   list.appendChild(newListItem)
+// }))
 let menu = makeMenu(menuItems)
-menuButton.appendChild(menu)
+console.log(menu)
+mountButton.appendChild(menu)
+console.log(mountButton)
+
