@@ -36,6 +36,7 @@ let menuItems = [
 
 
 function makeMenu(itemArray){
+  
   //create elements
   const mainDiv = document.createElement('div')
   const list = document.createElement('ul')
@@ -48,7 +49,8 @@ function makeMenu(itemArray){
   mainDiv.classList.add('menu')
 
   //give text content
-  //mainDiv.textContent = 'open'
+  // mainDiv.textContent = 'open'
+  // list.textContent = 'ta da'
 
   itemArray.forEach(item => {
     let newListItem = document.createElement('li')
@@ -64,8 +66,11 @@ function makeMenu(itemArray){
 
 return mainDiv
 }
-console.log(makeMenu(menuItems))
-menuItems.forEach(item => {
-  const menu = makeMenu(item)
-  menuButton.appendChild(menu)
-})
+// console.log(makeMenu(menuItems))
+// menuItems.forEach(item => {
+//   const menu = makeMenu(item)
+//   menuButton.appendChild(menu)
+// })
+const menuButton = document.querySelector('.menu-button')
+let menu = makeMenu(menuItems)
+menuButton.appendChild(menu)
